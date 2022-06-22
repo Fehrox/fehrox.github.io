@@ -1,50 +1,72 @@
-<style>
-    .div-block-5 {
-        width: 100vw;
-        height: 100vh;
-        text-align: center;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actuator Digital</title>
+</head>
+<body>
+    <style>
+        :root{
+            --gradient-background: linear-gradient(45deg, #2D1540, hsl(293, 32%, 40%), #2D1540);
+            --gradient-foreground:       
+                linear-gradient(217deg, #7D241E, rgba(0,0,0,0) 70.71%),
+                linear-gradient(127deg, #4F2753, rgba(0,0,0,0) 70.71%),
+                linear-gradient(336deg, #0D0D0D, rgba(0,0,0,0) 70.71%),
+                linear-gradient(66deg, #0D0D0D, rgba(0,0,0,0) 70.71%); 
+        }
 
-    .heading-2 {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        font-family: Ubuntu, Helvetica, sans-serif;
-        color: #fff;
-        text-align: center;
-        -o-object-fit: contain;
-        object-fit: contain;
-    }
+        body {
+            height:100vh;
+            margin: 0;
+            background-image: var(--gradient-background);
+            background-size: 200%;
+            animation: bg 20s infinite ease-in-out alternate;
+        }
 
-    .bg {
-        z-index: -1;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-image: url("bg.jpg");
-        background-size: cover;
-        filter: blur(20px) saturate(2.2) grayscale(.5);
-        transform: scale(1.1);
-    } 
+        .panel {
+            border-radius: 15px;
+            background-image: var(--gradient-foreground);
+            box-shadow: 0px 5px 20px;
+            background-size: 120%;
+            animation: bg 2s infinite ease-in-out alternate;
+        }
 
-    .body {
-        margin: 0px;
-    }
-</style>
+        @keyframes bg {
+            0% { background-position: left; }
+            100% { background-position: right; }
+        }
+    </style>
+    <div style="position: fixed; height: 100vh; width: 100vw;">
+        <div style="
+            position: absolute; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100%; 
+            width: 100%;">
+            <div style="width: 800px; height: 250px" class="modal"></div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%; ">
+            <div style="
+                width: 600px; 
+                height: 500px; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center;" 
+                class="panel">
+                <div style="
+                    background-size: cover; 
+                    background-image: url(./air-logo.svg); 
+                    width: 430px;
+                    height: 263px;
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                "></div>
+            </div>
+        </div>
 
-<body class="body">
-    <div class="bg"></div>
-    <div class="div-block-5">
-      <h1 class="heading-2">Hey there!</h1>
     </div>
 </body>
+</html>
