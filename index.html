@@ -10,27 +10,15 @@
     <style>
         :root{
             --gradient-background: linear-gradient(45deg, #2D1540, hsl(293, 32%, 40%), #2D1540);
-            --gradient-foreground:       
-                linear-gradient(217deg, #7D241E, rgba(0,0,0,0) 70.71%),
-                linear-gradient(127deg, #4F2753, rgba(0,0,0,0) 70.71%),
-                linear-gradient(336deg, #0D0D0D, rgba(0,0,0,0) 70.71%),
-                linear-gradient(66deg, #0D0D0D, rgba(0,0,0,0) 70.71%); 
         }
 
         body {
+            background: black;
             height:100vh;
             margin: 0;
-            background-image: var(--gradient-background);
-            background-size: 200%;
+            background-image: url('./bg.svg');
+            background-size: cover;
             animation: bg 20s infinite ease-in-out alternate;
-        }
-
-        .panel {
-            border-radius: 50%;
-            background-image: var(--gradient-foreground);
-            box-shadow: 0px 5px 20px;
-            background-size: 120%;
-            animation: bg 5s infinite ease-in-out alternate;
         }
 
         @keyframes bg {
@@ -56,16 +44,7 @@
         }
     </style>
     <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div style="
-            position: absolute; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100%; 
-            width: 100%;">
-            <div style="width: 800px; height: 250px;" class="modal"></div>
-        </div>
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%; ">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
             <div style="
                 width: 600px; 
                 height: 600px; 
@@ -83,17 +62,6 @@
                 "></div>
             </div>
         </div>
-    </div>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div
-            class="ring" 
-            style="
-                position: absolute;
-                background-size: contain; 
-                width: 100%;
-                height: 100%;
-                background-position: 50% 50%;
-            "></div>
     </div>
     <div style="position: fixed; height: 100vh; width: 100vw;">
         <div class="ring" style="animation-delay: 0s;"></div>
