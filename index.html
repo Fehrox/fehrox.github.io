@@ -10,13 +10,21 @@
         color: #333;
         margin: 0;
         background: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
     }
 
     .resume-container {
         display: flex;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 20px;
         background: #fff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        overflow: hidden;
+        border: 1px solid #ddd;
     }
 
     /* Left Column Styles */
@@ -32,8 +40,8 @@
     }
 
     .profile-image {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         background: #ccc;
         overflow: hidden;
@@ -134,6 +142,18 @@
         margin-bottom: 5px;
     }
 
+    .position-layout {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+    }
+
+    .position-logo {
+        filter: brightness(0);
+        height: 30px;
+        margin-right: 5px;
+    }
+
     .experience .org-info {
         font-size: 0.9em;
         color: #777;
@@ -229,8 +249,8 @@
         <div class="role">Studio/Technical Director</div>
         <div class="summary">
             <p>
-                Seasoned Studio Director, Technical Director, and Senior Lead Programmer with a proven history of guiding expert engineering teams and successfully delivering both enterprise solutions and high-quality, cross-platform games on PC, console, VR, and mobile platforms. Leveraging a strong background in software development and engineering management, I excel in applying C# and OOP, advanced data structures & algorythms, performance optimization techniques, networking solutions, and multi-threaded programming to create scalable, modular, and event-driven architectures.  
-                With a background in design and art and a proven record of technical evangelism through university lectures and industry keynotes—most recently a keynote at the 2024 Games Conference at Griffith—I bring a well-rounded perspective that bridges creativity and engineering insight.
+                Seasoned Studio Director, Technical Director, and Senior Lead Programmer with a proven history of guiding expert engineering teams and successfully delivering both enterprise solutions and high-quality, cross-platform games on PC, console, VR, and mobile platforms. Leveraging a strong background in software development and engineering management, I excel in applying C# and OOP, advanced data structures & algorythms, performance optimization techniques, networking solutions, and multi-threaded programming to create scalable, modular, and event-driven architectures.  <br/><br/>
+                With a background in game design and art and a proven record of technical evangelism through university lectures and industry keynotes—most recently a keynote at the 2024 Games Conference at Griffith—I bring a well-rounded perspective that bridges creativity and engineering insight. <br/><br/>
                 Over 8 years of operating my own game studio, along with founding two previous companies, have honed my ability to align technical vision with business goals, ensure seamless integration of design patterns and object-oriented principles, and adopt modern game engines, CI/CD tools, and Agile/Scrum methodologies. I thrive on fostering collaborative cultures, maintaining clear communication at all organizational levels, and continuously staying ahead of industry trends and best practices.            
             </p>
         </div>
@@ -238,7 +258,10 @@
         <div class="experience">
             <h2>Experience</h2>
             
-            <div class="position-title">Studio Director, Actuator Digital Pty Ltd</div>
+            <div class="position-layout">
+                <div class="position-title">Studio Director, Actuator Digital Pty Ltd</div>
+                <!-- <img class="position-logo" src="https://actuator.digital/images/customer-logos/actuator.svg"> -->
+            </div>
             <div class="org-info">Jan 2017 – Present | Queensland, Australia</div>
             <ul>
                 <li>Managed end-to-end studio operations, from establishment and budgeting to cash flow oversight, sales strategy, and strategic planning, ensuring financial stability and sustainable growth.</li>
@@ -255,15 +278,22 @@
                 <li>Deployed Agile/Scrum methodologies, connecting iterative development processes with high-level studio objectives and product milestones.</li>
             </ul>
 
-            <div class="position-title">Member of the Board of Advisors, Earth 2</div>
+            
+            <div class="position-layout">
+                <div class="position-title">Member of the Board of Advisors</div>
+                <!-- <img class="position-logo" src="https://actuator.digital/images/logos/e2-logo.png"> -->
+            </div>
             <div class="org-info">Nov 2020 – Jul 2021 | Brisbane, Australia</div>
             <ul>
                 <li>Provided strategic technical guidance to support large-scale virtual worlds and platform infrastructures, ensuring solutions matched market and user needs.</li>
                 <li>Recommended toolsets and frameworks to achieve scalability, performance, and extensibility, drawing on deep experience with modern engines and best practices.</li>
                 <li>Led a development team through the initial scaling phase and user roll-out, translating high-level concepts into actionable plans and stable architectures for early-stage product deployment.</li>
             </ul>
-
-            <div class="position-title">Co-Founder, Senior Software Engineer, Cree8ware</div>
+            
+            <div class="position-layout">
+                <div class="position-title">Co-Founder, Senior Software Engineer, Cree8ware</div>
+                <!-- <img class="position-logo" src="https://actuator.digital/images/logos/cree8-logo.svg"> -->
+            </div>
             <div class="org-info">Sep 2014 – Dec 2016 | Gold Coast, QLD</div>
             <ul>
                 <li>Architected and developed cross-platform, distributed, cloud-based solutions, applying OOP, design patterns, large database solutios, and multi-threaded techniques to deliver robust, scalable products.</li>
