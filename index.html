@@ -1,94 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actuator Digital</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sebastiaan Fehr - Technical Director Resume</title>
+<style>
+    body {
+        font-family: "Open Sans", Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        background: #f9f9f9;
+    }
+
+    .resume-container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #fff;
+    }
+
+    /* Left Column Styles */
+    .left-column {
+        width: 35%;
+        background: #000;
+        color: #fff;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .profile-image {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: #ccc;
+        overflow: hidden;
+        margin-bottom: 30px;
+        filter: grayscale(100%);
+        border: solid 2px white;
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .contact-info, .skills, .education, .languages {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contact-info a {
+        color: white;
+        text-decoration:none;
+    }
+
+    .contact-info p,
+    .skills p,
+    .education p,
+    .languages p {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+    }
+
+    .section-title {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .skills ul,
+    .languages ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .skills ul li,
+    .languages ul li {
+        margin-bottom: 10px;
+        font-size: 0.9em;
+    }
+
+    /* Right Column Styles */
+    .right-column {
+        width: 65%;
+        padding: 40px 60px;
+        box-sizing: border-box;
+    }
+
+    .name {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .role {
+        font-size: 1.2em;
+        font-weight: 300;
+        color: #555;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .summary {
+        margin-bottom: 40px;
+    }
+
+    .summary p {
+        font-size: 1em;
+        line-height: 1.6em;
+        color: #555;
+        margin: 0;
+    }
+
+    .experience {
+        margin-bottom: 40px;
+    }
+
+    .experience h2 {
+        margin-bottom: 20px;
+    }
+
+    .experience .position-title {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    .experience .org-info {
+        font-size: 0.9em;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    .experience ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        border-left: 2px solid #000;
+        padding-left: 15px;
+    }
+
+    .experience li {
+        margin-bottom: 10px;
+        font-size: 0.95em;
+        line-height: 1.4em;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 800px) {
+        .resume-container {
+            flex-direction: column;
+        }
+
+        .left-column, .right-column {
+            width: 100%;
+        }
+
+        .right-column {
+            padding: 20px;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+    }
+</style>
 </head>
 <body>
-    <style>
-        :root{
-            --gradient-background: linear-gradient(45deg, #2D1540, hsl(293, 32%, 40%), #2D1540);
-        }
+<div class="resume-container">
+    <div class="left-column">
+        <div class="profile-image">
+            <!-- Replace with your image URL -->
+            <img src="headshot.png" alt="Sebastiaan Fehr" />
+        </div>
+        
+        <div class="contact-info">
+            <div class="section-title">Contact</div>
+            <p><a href="mailto://sebfehr@gmail.com">sebfehr@gmail.com</a></p>
+            <p><a href="tel://+61410810858">0410840858</a></p>
+            <p>Brisbane, Queensland</p>
+            <p><a href="https://www.linkedin.com/in/sebastiaan-fehr/details/experience/" style="color:#fff; text-decoration:none;">LinkedIn</a></p>
+            <p><a href="https://github.com/Fehrox" style="color:#fff; text-decoration:none;">Github</a></p>
+        </div>
 
-        body {
-            background: black;
-            height:100vh;
-            margin: 0;
-            background-image: url('./bg.svg');
-            background-size: cover;
-            animation: bg 20s infinite ease-in-out alternate;
-        }
+        <div class="skills">
+            <div class="section-title">Skills</div>
+            <ul>
+                <li>Technical Leadership (Director & Lead Programmer Roles)</li>
+                <li>Shipped Multi-Platform Titles (PC, Console, VR, Mobile)</li>
+                <li>Software Dev & Engineering Management</li>
+                <li>Expert C#, Data Structures, Angorythms</li>
+                <li>Expert Networking, Multi-threaded Programming</li>
+                <li>Performance Optimization & Event-Driven Architecture</li>
+                <li>SOLID, Object-Oriented Design & Design Patterns</li>
+                <li>Modular Architecture & Scalable Solutions</li>
+                <li>Unity, Custom Engines, Git, TeamCity</li>
+                <li>Agile/Scrum Methodologies & Iterative Development</li>
+                <li>Technical Evangelism</li>
+                <li>Art & Design (3D, UI, UX)</li>
+            </ul>
+        </div>
 
-        @keyframes bg {
-            0% { background-position: left; }
-            100% { background-position: right; }
-        }
+        <div class="education">
+            <div class="section-title">Education</div>
+            <p>Bachelor of Games and Interactive Entertainment, QUT<br>
+                <i>Software Technologies Major, Animation Minor</i><br>
+            2008 – 2012 (Incomplete)</p>
+        </div>
 
-        .ring {
-            opacity: 0;
-            background-image: url('./circle.svg'); 
-            background-repeat: no-repeat;
-            animation: ring-anim 30s infinite;
-            position: absolute;
-            background-size: contain; 
-            width: 100%;
-            height: 100%;
-            background-position: 50% 50%;
-        }
-
-        @keyframes ring-anim {
-            0% { transform: scale(0) rotate(1080deg); opacity: 0; }
-            100% { transform: scale(3.5) rotate(0deg); opacity: 100; }
-        }
-    </style>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <div style="
-                width: 600px; 
-                height: 600px; 
-                display: flex; 
-                justify-content: center; 
-                align-items: center;" 
-                class="panel">
-                <div style="
-                    background-size: cover; 
-                    background-image: url(./air-logo.svg); 
-                    width: 322.5px;
-                    height: 197.25px;
-                    background-repeat: no-repeat;
-                    background-position: 50% 50%;
-                "></div>
-            </div>
+        <div class="languages">
+            <div class="section-title">Languages</div>
+            <ul>
+                <li>English</li>
+                <li>Dutch</li>
+            </ul>
         </div>
     </div>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div class="ring" style="animation-delay: 0s;"></div>
+    <div class="right-column">
+        <h1 class="name">Sebastiaan Fehr</h1>
+        <div class="role">Studio/Technical Director</div>
+        <div class="summary">
+            <p>
+                Seasoned Studio Director, Technical Director, and Senior Lead Programmer with a proven history of guiding expert engineering teams and successfully delivering both enterprise solutions and high-quality, cross-platform games on PC, console, VR, and mobile platforms. Leveraging a strong background in software development and engineering management, I excel in applying C# and OOP, advanced data structures & algorythms, performance optimization techniques, networking solutions, and multi-threaded programming to create scalable, modular, and event-driven architectures.  
+                With a background in design and art and a proven record of technical evangelism through university lectures and industry keynotes—most recently a keynote at the 2024 Games Conference at Griffith—I bring a well-rounded perspective that bridges creativity and engineering insight.
+                Over 8 years of operating my own game studio, along with founding two previous companies, have honed my ability to align technical vision with business goals, ensure seamless integration of design patterns and object-oriented principles, and adopt modern game engines, CI/CD tools, and Agile/Scrum methodologies. I thrive on fostering collaborative cultures, maintaining clear communication at all organizational levels, and continuously staying ahead of industry trends and best practices.            
+            </p>
+        </div>
+
+        <div class="experience">
+            <h2>Experience</h2>
+            
+            <div class="position-title">Studio Director, Actuator Digital Pty Ltd</div>
+            <div class="org-info">Jan 2017 – Present | Queensland, Australia</div>
+            <ul>
+                <li>Managed end-to-end studio operations, from establishment and budgeting to cash flow oversight, sales strategy, and strategic planning, ensuring financial stability and sustainable growth.</li>
+                <li>Defined and executed long-term technical strategies, ensuring the engineering roadmap complemented the studio's product and growth plans.</li>
+                <li>Oversaw multiple teams and projects—coordinating development schedules, budgets, and resources—to deliver on-time, on-budget, and technically robust titles.</li>
+                <li>Developed internal tools to streamline operations and enhance development pipelines, while maintaining a hands-on technical role in project delivery, ensuring efficient workflows and continuous improvement.</li>
+                <li>Lead teams to deliver mission critical infrastructure to customers in in enterprise contexts, ensuring the Actuator team smoothly integrated into a existing developmet strucutres. </li>
+                <li>Collaborated with cross-functional disciplines to define technical requirements aligned with the creative vision, ensuring design and engineering worked hand-in-hand.</li>
+                <li>Maintained clear communication of technical goals, bridging technology and creative teams, and effectively engaging C-Suite for external stakeholders.</li>
+                <li>Served as the primary technical liaison for external partners (Tech, Tools, Ops, Platform), managing key relationships to ensure seamless integrations.</li>
+                <li>Drew on a fundamental understanding of multiple disciplines, acting as a game designer and providing creative direction on internal IP development, ensuring cohesive gameplay experiences and a unified product vision.</li>
+                <li>Recruited top engineering talent, mentored teams, and established rigorous coding standards and best practices to uphold quality and innovation.</li>
+                <li>Fostered a collaborative, learning-oriented culture, consistently sharing knowledge, improving processes, and evaluating new technologies to remain at the cutting edge.</li>
+                <li>Deployed Agile/Scrum methodologies, connecting iterative development processes with high-level studio objectives and product milestones.</li>
+            </ul>
+
+            <div class="position-title">Member of the Board of Advisors, Earth 2</div>
+            <div class="org-info">Nov 2020 – Jul 2021 | Brisbane, Australia</div>
+            <ul>
+                <li>Provided strategic technical guidance to support large-scale virtual worlds and platform infrastructures, ensuring solutions matched market and user needs.</li>
+                <li>Recommended toolsets and frameworks to achieve scalability, performance, and extensibility, drawing on deep experience with modern engines and best practices.</li>
+                <li>Led a development team through the initial scaling phase and user roll-out, translating high-level concepts into actionable plans and stable architectures for early-stage product deployment.</li>
+            </ul>
+
+            <div class="position-title">Co-Founder, Senior Software Engineer, Cree8ware</div>
+            <div class="org-info">Sep 2014 – Dec 2016 | Gold Coast, QLD</div>
+            <ul>
+                <li>Architected and developed cross-platform, distributed, cloud-based solutions, applying OOP, design patterns, large database solutios, and multi-threaded techniques to deliver robust, scalable products.</li>
+                <li>Tracked, managed and planned business requirements with key stakeholders, scoped and tarcked large task backlogs and development roadmaps, oversaw project execution and delivery.</li>
+                <li>Managed engineering teams, balancing iterative development processes with high-level business goals, and integrating CI/CD pipelines to streamline release cycles.</li>
+                <li>Digitized and modernized existing business processes, replacing manual workflows in construction estimation, time tracking, payroll, project planning, and reporting with integrated software solutions.</li>
+                <li>Developed financial analysis tools and automated payroll systems for 200+ employees, significantly improving efficiency, data accuracy, and compliance.</li>
+                <li>Created and deployed facial recognition systems, expanding the technology portfolio and enhancing the accuracy and efficiency of time-keeping for payroll.</li>
+                <li>Oversaw technology patents, guiding the company’s intellectual property strategy and supporting innovation-driven growth.</li>
+                <li>Engaged with builder unions and key stakeholders, effectively communicating the value of modernization and driving the adoption of cutting-edge technologies across the industry.</li>
+            </ul>
+
+            ...Do I even need this one?
+            <div class="position-title">Founder, Pixelflair Interactive</div>
+            <div class="org-info">Jan 2013 – Aug 2014 | Gold Coast, QLD</div>
+            <ul>
+                <li>Led a small indipendent team, using game industry skills to create enterprise productivity tools.</li>
+                <li>Created and released indipendent mobile games and lifestyle apps.</li>
+            </ul>
+
+            <div class="position-title">Tutor, Object Oriented Programming, QUT</div>
+            <div class="org-info">Jan 2013 – Aug 2014 | Brisbane, QLD</div>
+            <ul>
+                <li>Guided students through core OOP principles—encapsulation, inheritance, polymorphism, abstraction—and best practices in software design.</li>
+                <li>Taught foundational and advanced design patterns, data structures, and clean coding techniques to future developers.</li>
+                <li>Mentored diverse student cohorts, improving their problem-solving skills, debugging techniques, and understanding of event-driven architectures.</li>
+                <li>Fostered a collaborative learning environment, encouraging peer review, iterative improvement, and the adoption of industry-standard tools and methodologies.</li>
+            </ul>            
+
+            <div class="position-title">Programmer, The Binary Mill</div>
+            <div class="org-info">Jan 2012 – Aug 2014 | Gold Coast, QLD</div>
+            <ul>
+                <li>Contributed to award-winning titles, focusing on performance optimization, engine integrations, and stable, maintainable codebases.</li>
+                <li>Honed communication skills by working closely with designers, producers, and executives, ensuring engineering efforts met creative and strategic objectives.</li>
+            </ul>
+
+            <div class="position-title">Public Speaking & Thought Leadership</div>
+            <ul>
+                <li>Keynote Speaker, 2024 Games Conference at Griffith University, discussing future trends in cross-platform game development and UX design.</li>
+                <li>Regular guest lecturer at QUT, sharing insights on OOP principles, design patterns, and modern gaming technologies.</li>
+                <li>Creator & Maintainer of multiple open-source projects, fostering knowledge exchange and industry best practices.</li>
+                <li>Manager of the Brisbane Unity Developers Meetup Group.</li>
+            </ul>
+
+        </div>
     </div>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div class="ring" style="animation-delay: 3.75s;"></div>
-    </div>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div class="ring" style="animation-delay: 7.5s;"></div>
-    </div>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div class="ring" style="animation-delay: 11.25s;"></div>
-    </div>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div class="ring" style="animation-delay: 15s;"></div>
-    </div>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div class="ring" style="animation-delay: 18.75s;"></div>
-    </div>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div class="ring" style="animation-delay: 22.5s;"></div>
-    </div>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div class="ring" style="animation-delay: 26.25s;"></div>
-    </div>
-    <div style="position: fixed; height: 100vh; width: 100vw;">
-        <div class="ring" style="animation-delay: 30s;"></div>
-    </div>
+</div>
 </body>
 </html>
