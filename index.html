@@ -45,7 +45,7 @@
         border-radius: 50%;
         background: #ccc;
         overflow: hidden;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
         filter: grayscale(100%);
         border: solid 2px white;
     }
@@ -140,6 +140,9 @@
         font-weight: bold;
         font-size: 1.1em;
         margin-bottom: 5px;
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
     }
 
     .position-layout {
@@ -172,6 +175,57 @@
         margin-bottom: 10px;
         font-size: 0.95em;
         line-height: 1.4em;
+    }
+
+    .popout-icon::after {
+        content: "\2B08"; /* Unicode code point */
+        margin-left: 4px;
+    }
+
+    .references {
+        margin-bottom: 40px;
+    }
+
+    .references h2 {
+        margin-bottom: 20px;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .references hr {
+        border: none;
+        border-top: 1px solid #aaa;
+        margin-bottom: 20px;
+    }
+
+    .ref-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    @media (max-width: 800px) {
+        .ref-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .reference-name {
+        font-weight: bold;
+        font-size: 1em;
+        color: #333;
+    }
+
+    .reference-role {
+        font-size: 0.95em;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .reference-contact {
+        margin: 5px 0;
+        font-size: 0.9em;
+        line-height: 1.5em;
     }
 
     /* Responsive Styles */
@@ -222,14 +276,15 @@
                 <li>Performance Optimisation & Event-Driven Architecture</li>
                 <li>SOLID, Object-Oriented Design & Design Patterns</li>
                 <li>Modular Architecture & Scalable Solutions</li>
-                <li>Unity, Custom Engines</li>
-                <li>Git, Github, Perforce</li>
-                <li>Test Driven Development Practices</li>
+                <li>Unity, Custom Engines, Git, Github, Perforce</li>
                 <li>CI & CD, Github Actions, TeamCity, Jenkins, Azure DevOps</li>
                 <li>Agile/Scrum Methodologies & Iterative Development</li>
-                <li>Quality Assurance & Testing (Unit Testing, Integration Testing, Test Coverage, Unity Test Pilot)</li>
+                <li>Automated QA & Testing (Unit & Integration)</li>
                 <li>Technical Evangelism</li>
                 <li>Art & Design (3D, UI, UX)</li>
+                <li>Production & Planning</li>
+                <li>Release Management</li>
+                <li>Studio Operations</li>
             </ul>
         </div>
 
@@ -251,6 +306,7 @@
     <div class="right-column">
         <h1 class="name">Sebastiaan Fehr</h1>
         <div class="role">Studio/Technical Director</div>
+
         <div class="summary">
             <p>
                 Seasoned Studio Director, Technical Director, and Senior Lead Programmer with a proven history of guiding expert engineering teams and successfully delivering both enterprise solutions and high-quality, cross-platform games on PC, console, VR, and mobile platforms. Leveraging a strong background in software development and engineering management, I excel in applying C# and OOP, advanced data structures & algorithms, performance optimisation techniques, networking solutions, and multi-threaded programming to create scalable, modular, and event-driven architectures.  <br/><br/>
@@ -259,15 +315,17 @@
             </p>
         </div>
 
+        <hr/>
         <div class="experience">
             <h2>Experience</h2>
             
-            <div class="position-title">Studio Director, Actuator Digital Pty Ltd</div>
+            <div class="position-title">Studio Director, Actuator Digital Pty Ltd <a href="https://actuator.digital/" target="_blank"><img src="icon-popout.svg"></a></div>
             <div class="org-info">Jan 2017–Present | Queensland, Australia</div>
             <ul>
                 <li>Managed end-to-end studio operations, from establishment and budgeting to cash flow oversight, sales strategy, and strategic planning, ensuring financial stability and sustainable growth.</li>
                 <li>Defined and executed long-term technical strategies, ensuring the engineering roadmap complemented the studio's product and growth plans.</li>
                 <li>Oversaw multiple teams and projects—coordinating development schedules, budgets, and resources—to deliver on time, on budget, and technically robust titles.</li>
+                <li>Partnered with prominent studios and enterprise clients—such as XR Games, SMG, The Binary Mill, PlaySide Studios, and Epiroc—contributing to renowned franchises (e.g., Hitman, Star Wars) and delivering critical solutions to clients.</li>
                 <li>Developed internal tools to streamline operations and enhance development pipelines while maintaining a hands-on technical role in project delivery, ensuring efficient workflows and continuous improvement.</li>
                 <li>Lead teams to deliver mission-critical infrastructure to customers in enterprise contexts, ensuring the Actuator team smoothly integrated into existing development structures. </li>
                 <li>Collaborated with cross-functional disciplines to define technical requirements aligned with the creative vision, ensuring design and engineering worked hand-in-hand.</li>
@@ -280,7 +338,7 @@
                 <li>Deployed Agile/Scrum methodologies, connecting iterative development processes with high-level studio objectives and product milestones.</li>
             </ul>
 
-            <div class="position-title">Member of the Board of Advisors, Earth 2 Pty Ltd</div>
+            <div class="position-title">Member of the Board of Advisors, Earth 2 Pty Ltd <a href="https://earth2.io/" target="_blank"><img src="icon-popout.svg"></a></div>
             <div class="org-info">Nov 2020–Jul 2021 | Brisbane, Australia</div>
             <ul>
                 <li>Provided strategic technical guidance to support large-scale virtual worlds and platform infrastructures, ensuring solutions matched market and user needs.</li>
@@ -288,8 +346,7 @@
                 <li>Led a development team through the initial scaling phase and user rollout, translating high-level concepts into actionable plans and stable architectures for early-stage product deployment.</li>
             </ul>
             
-
-            <div class="position-title">Co-Founder, Senior Software Engineer, Cree8ware</div>
+            <div class="position-title">Co-Founder, Senior Software Engineer, Cree8ware <a href="https://cree8.com.au/services/am8interest" target="_blank"><img src="icon-popout.svg"></a></div>
             <div class="org-info">Sep 2014–Dec 2016 | Gold Coast, QLD</div>
             <ul>
                 <li>Architected and developed cross-platform, distributed, cloud-based solutions, applying OOP, design patterns, large database solutions, and multi-threaded techniques to deliver robust, scalable products.</li>
@@ -318,10 +375,10 @@
                 <li>Fostered a collaborative learning environment, encouraging peer review, iterative improvement, and the adoption of industry-standard tools and methodologies.</li>
             </ul>            
 
-            <div class="position-title">Programmer, The Binary Mill</div>
+            <div class="position-title">Programmer, The Binary Mill <a href="https://www.thebinarymill.com/" target="_blank"><img src="icon-popout.svg"></a></div>
             <div class="org-info">Jan 2012–Aug 2014 | Gold Coast, QLD</div>
             <ul>
-                <li>Contributed to award-winning titles, focusing on performance optimisation, engine integrations, and stable, maintainable codebases.</li>
+                <li>Contributed to award-winning titles, focusing on multiplayer networking, accounts and social play, and building stable, maintainable codebases.</li>
                 <li>Honed communication skills by working closely with designers, producers, and executives, ensuring engineering efforts met creative and strategic objectives.</li>
             </ul>
 
@@ -329,11 +386,51 @@
             <ul>
                 <li>Keynote Speaker, 2024 Games Conference at Griffith University, discussing future trends in cross-platform game development and UX design.</li>
                 <li>Regular guest lecturer at QUT, sharing insights on OOP principles, design patterns, and modern gaming technologies.</li>
-                <li>Creator & Maintainer of multiple open-source projects, like Unity Test Pilot and Flume, fostering knowledge exchange and industry best practices.</li>
+                <li>Creator & Maintainer of multiple open-source projects, including Unity Test Pilot and Flume, fostering knowledge exchange and industry best practices.</li>
                 <li>Manager of the Brisbane Unity Developers Meetup Group.</li>
             </ul>
 
         </div>
+
+        <div class="references">
+            <h2>References</h2>
+            <hr>
+            <div class="ref-container">
+                <div class="reference">
+                    <div class="reference-name">Ingmar Lak</div>
+                    <div class="reference-role">Studio Director, The Binary Mill</div>
+                    <div class="reference-contact">
+                        <strong>Phone:</strong> 0412572587<br>
+                        <strong>Email:</strong> ingmar@thebinarymill.com
+                    </div>
+                </div>
+                <div class="reference">
+                    <div class="reference-name">Baris Ozturkmen</div>
+                    <div class="reference-role">Co-Founder, Actuator Digital</div>
+                    <div class="reference-contact">
+                        <strong>Phone:</strong> 0432112163<br>
+                        <strong>Email:</strong> baris@actuator.digital
+                    </div>
+                </div>
+                <div class="reference">
+                    <div class="reference-name">Cody J Phillips</div>
+                    <div class="reference-role">Head of Games Faculty, QUT</div>
+                    <div class="reference-contact">
+                        <strong>Phone:</strong> 123-456-7890<br>
+                        <strong>Email:</strong> cody.phillips@qut.edu.au
+                    </div>
+                </div>
+                <div class="reference">
+                    <div class="reference-name">Niklas Meyer</div>
+                    <div class="reference-role">Head of Software Development, CR Digital</div>
+                    <div class="reference-contact">
+                        <strong>Phone:</strong> 0409056652<br>
+                        <strong>Email:</strong> meyer_niklas@hotmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 </body>
