@@ -22,10 +22,24 @@
         margin: 20px;
         background: #fff;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        flex-wrap: wrap; /* Allows elements to wrap to the next line */
         border-radius: 4px;
         overflow: hidden;
         border: 1px solid #ddd;
     }
+
+    @media print {
+        .resume-container {
+            width: 595.28px; /* PDF page width */
+            max-width: 100%; /* Ensure it fits */
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 12px; /* Adjust font size to fit */
+            box-shadow: none;
+            border: none;
+        }
+    }
+
 
     /* Left Column Styles */
     .left-column {
@@ -136,6 +150,11 @@
         margin-bottom: 20px;
     }
 
+    .position {
+        page-break-inside: avoid;
+
+    }
+
     .experience .position-title {
         font-weight: bold;
         font-size: 1.1em;
@@ -177,10 +196,10 @@
         line-height: 1.4em;
     }
 
-    .popout-icon::after {
-        content: "\2B08"; /* Unicode code point */
-        margin-left: 4px;
-    }
+    /* .bottom-column {
+        width: 100%;
+        padding: 50px 90px;
+    } */
 
     .references {
         margin-bottom: 40px;
@@ -228,6 +247,25 @@
         line-height: 1.5em;
     }
 
+    .print-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .print-button:hover {
+        background-color: #0056b3;
+    }
+
+
     /* Responsive Styles */
     @media (max-width: 800px) {
         .resume-container {
@@ -247,6 +285,7 @@
         }
     }
 </style>
+
 </head>
 <body>
 <div class="resume-container">
@@ -309,87 +348,105 @@
 
         <div class="summary">
             <p>
-                Seasoned Studio Director, Technical Director, and Senior Lead Programmer with a proven history of guiding expert engineering teams and successfully delivering both enterprise solutions and high-quality, cross-platform games on PC, console, VR, and mobile platforms. Leveraging a strong background in software development and engineering management, I excel in applying C# and OOP, advanced data structures & algorithms, performance optimisation techniques, networking solutions, and multi-threaded programming to create scalable, modular, and event-driven architectures.  <br/><br/>
+                Seasoned Studio Director, Technical Director, and Senior Lead Programmer with a proven history of guiding expert engineering teams and successfully delivering both enterprise solutions and high-quality, cross-platform games on PC, console, VR, and mobile platforms. <br/><br/>
+                Leveraging a strong background in software development and engineering management, I excel in applying C# and OOP, advanced data structures & algorithms, performance optimisation techniques, networking solutions, and multi-threaded programming to create scalable, modular, and event-driven architectures.  <br/><br/>
                 With a background in game design and art and a proven record of technical evangelism through university lectures and industry keynotes—most recently a keynote at the 2024 Games Conference at Griffith—I bring a well-rounded perspective that bridges creativity and engineering insight. <br/><br/>
-                Over 8 years of operating my own game studio, along with founding two previous companies, have honed my ability to align technical vision with business goals, ensure seamless integration of design patterns and object-oriented principles, and adopt modern game engines, CI/CD tools, and Agile/Scrum methodologies. I thrive on fostering collaborative cultures, maintaining clear communication at all organisational levels, and continuously staying ahead of industry trends and best practices.            
+                Over 8 years of operating my own game studio, along with founding two previous companies, have honed my ability to align technical vision with business goals, adopting modern game engines, CI/CD tools, and Agile/Scrum methodologies. I thrive on fostering collaborative cultures, maintaining clear communication at all organisational levels, and continuously staying ahead of industry trends and best practices.            
             </p>
         </div>
 
         <hr/>
         <div class="experience">
-            <h2>Experience</h2>
             
-            <div class="position-title">Studio Director, Actuator Digital Pty Ltd <a href="https://actuator.digital/" target="_blank"><img src="icon-popout.svg"></a></div>
-            <div class="org-info">Jan 2017–Present | Queensland, Australia</div>
-            <ul>
-                <li>Managed end-to-end studio operations, from establishment and budgeting to cash flow oversight, sales strategy, and strategic planning, ensuring financial stability and sustainable growth.</li>
-                <li>Defined and executed long-term technical strategies, ensuring the engineering roadmap complemented the studio's product and growth plans.</li>
-                <li>Oversaw multiple teams and projects—coordinating development schedules, budgets, and resources—to deliver on time, on budget, and technically robust titles.</li>
-                <li>Partnered with prominent studios and enterprise clients—such as XR Games, SMG, The Binary Mill, PlaySide Studios, and Epiroc—contributing to renowned franchises (e.g., Hitman, Star Wars) and delivering critical solutions to clients.</li>
-                <li>Developed internal tools to streamline operations and enhance development pipelines while maintaining a hands-on technical role in project delivery, ensuring efficient workflows and continuous improvement.</li>
-                <li>Lead teams to deliver mission-critical infrastructure to customers in enterprise contexts, ensuring the Actuator team smoothly integrated into existing development structures. </li>
-                <li>Collaborated with cross-functional disciplines to define technical requirements aligned with the creative vision, ensuring design and engineering worked hand-in-hand.</li>
-                <li>Maintained clear communication of technical goals, bridging technology and creative teams, and effectively engaging C-Suite for external stakeholders.</li>
-                <li>Served as the primary technical liaison for external partners (Tech, Tools, Ops, Platform), managing key relationships to ensure seamless integrations.</li>
-                <li>Developed and integrated comprehensive testing frameworks (including open-source Unity Test Pilot) to ensure full code coverage, robust unit and integration testing, and maintain high product quality standards in complex engineering environments.</li>
-                <li>Drew on a fundamental understanding of multiple disciplines, acting as a game designer and providing creative direction on internal IP development, ensuring cohesive gameplay experiences and a unified product vision.</li>
-                <li>Designed a robust recruiting pipeline. Recruited top engineering talent, mentored teams, and established rigorous coding standards and best practices to uphold quality and innovation.</li>
-                <li>Fostered a collaborative, learning-oriented culture, consistently sharing knowledge, improving processes, and evaluating new technologies to remain at the cutting edge.</li>
-                <li>Deployed Agile/Scrum methodologies, connecting iterative development processes with high-level studio objectives and product milestones.</li>
-            </ul>
+            <div class="position">
+                <h2>Experience</h2>
 
-            <div class="position-title">Member of the Board of Advisors, Earth 2 Pty Ltd <a href="https://earth2.io/" target="_blank"><img src="icon-popout.svg"></a></div>
-            <div class="org-info">Nov 2020–Jul 2021 | Brisbane, Australia</div>
-            <ul>
-                <li>Provided strategic technical guidance to support large-scale virtual worlds and platform infrastructures, ensuring solutions matched market and user needs.</li>
-                <li>Recommended toolsets and frameworks to achieve scalability, performance, and extensibility, drawing on deep experience with modern engines and best practices.</li>
-                <li>Led a development team through the initial scaling phase and user rollout, translating high-level concepts into actionable plans and stable architectures for early-stage product deployment.</li>
-            </ul>
+                <div class="position-title">Studio Director, Actuator Digital Pty Ltd <a href="https://actuator.digital/" target="_blank"><img src="icon-popout.svg"></a></div>
+                <div class="org-info">Jan 2017–Present | Queensland, Australia</div>
+                <ul>
+                    <li>Managed end-to-end studio operations, from establishment and budgeting to cash flow oversight, sales strategy, and strategic planning, ensuring financial stability and sustainable growth.</li>
+                    <li>Defined and executed long-term technical strategies, ensuring the engineering roadmap complemented the studio's product and growth plans.</li>
+                    <li>Oversaw multiple teams and projects—coordinating development schedules, budgets, and resources—to deliver on time, on budget, and technically robust titles.</li>
+                    <li>Partnered with prominent studios and enterprise clients—such as XR Games, SMG, The Binary Mill, PlaySide Studios, and Epiroc—contributing to renowned franchises (e.g., Hitman, Star Wars) and delivering critical solutions to clients.</li>
+                    <li>Developed internal tools to streamline operations and enhance development pipelines while maintaining a hands-on technical role in project delivery, ensuring efficient workflows and continuous improvement.</li>
+                    <li>Lead teams to deliver mission-critical infrastructure to customers in enterprise contexts, ensuring the Actuator team smoothly integrated into existing development structures. </li>
+                    <li>Collaborated with cross-functional disciplines to define technical requirements aligned with the creative vision, ensuring design and engineering worked hand-in-hand.</li>
+                    <li>Maintained clear communication of technical goals, bridging technology and creative teams, and effectively engaging C-Suite for external stakeholders.</li>
+                    <li>Served as the primary technical liaison for external partners (Tech, Tools, Ops, Platform), managing key relationships to ensure seamless integrations.</li>
+                    <li>Developed and integrated comprehensive testing frameworks (including open-source Unity Test Pilot) to ensure full code coverage, robust unit and integration testing, and maintain high product quality standards in complex engineering environments.</li>
+                    <li>Drew on a fundamental understanding of multiple disciplines, acting as a game designer and providing creative direction on internal IP development, ensuring cohesive gameplay experiences and a unified product vision.</li>
+                    <li>Designed a robust recruiting pipeline. Recruited top engineering talent, mentored teams, and established rigorous coding standards and best practices to uphold quality and innovation.</li>
+                    <li>Fostered a collaborative, learning-oriented culture, consistently sharing knowledge, improving processes, and evaluating new technologies to remain at the cutting edge.</li>
+                    <li>Deployed Agile/Scrum methodologies, connecting iterative development processes with high-level studio objectives and product milestones.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience">
+            <div class="position">
+                <div class="position-title">Member of the Board of Advisors, Earth 2 Pty Ltd <a href="https://earth2.io/" target="_blank"><img src="icon-popout.svg"></a></div>
+                <div class="org-info">Nov 2020–Jul 2021 | Brisbane, Australia</div>
+                <ul>
+                    <li>Provided strategic technical guidance to support large-scale virtual worlds and platform infrastructures, ensuring solutions matched market and user needs.</li>
+                    <li>Recommended toolsets and frameworks to achieve scalability, performance, and extensibility, drawing on deep experience with modern engines and best practices.</li>
+                    <li>Led a development team through the initial scaling phase and user rollout, translating high-level concepts into actionable plans and stable architectures for early-stage product deployment.</li>
+                </ul>
+            </div>
             
-            <div class="position-title">Co-Founder, Senior Software Engineer, Cree8ware <a href="https://cree8.com.au/services/am8interest" target="_blank"><img src="icon-popout.svg"></a></div>
-            <div class="org-info">Sep 2014–Dec 2016 | Gold Coast, QLD</div>
-            <ul>
-                <li>Architected and developed cross-platform, distributed, cloud-based solutions, applying OOP, design patterns, large database solutions, and multi-threaded techniques to deliver robust, scalable products.</li>
-                <li>Tracked, managed, and planned business requirements with key stakeholders, scoped and tracked large task backlogs and development roadmaps, oversaw project execution and delivery.</li>
-                <li>Managed engineering teams, balancing iterative development processes with high-level business goals, and integrating CI/CD pipelines to streamline release cycles.</li>
-                <li>Digitised and modernised existing business processes, replacing manual workflows in construction estimation, time tracking, payroll, project planning, and reporting with integrated software solutions.</li>
-                <li>Developed financial analysis tools and automated payroll systems for 200+ employees, significantly improving efficiency, data accuracy, and compliance.</li>
-                <li>Created and deployed facial recognition systems, expanding the technology portfolio and enhancing the accuracy and efficiency of timekeeping for payroll.</li>
-                <li>Oversaw technology patents, guiding the company’s intellectual property strategy and supporting innovation-driven growth.</li>
-                <li>Engaged with builder unions and key stakeholders, effectively communicating the value of modernization and driving the adoption of cutting-edge technologies across the industry.</li>
-            </ul>
+            <div class="position">
+                <div class="position-title">Co-Founder, Senior Software Engineer, Cree8ware <a href="https://cree8.com.au/services/am8interest" target="_blank"><img src="icon-popout.svg"></a></div>
+                <div class="org-info">Sep 2014–Dec 2016 | Gold Coast, QLD</div>
+                <ul>
+                    <li>Architected and developed cross-platform, distributed, cloud-based solutions, applying OOP, design patterns, large database solutions, and multi-threaded techniques to deliver robust, scalable products.</li>
+                    <li>Tracked, managed, and planned business requirements with key stakeholders, scoped and tracked large task backlogs and development roadmaps, oversaw project execution and delivery.</li>
+                    <li>Managed engineering teams, balancing iterative development processes with high-level business goals, and integrating CI/CD pipelines to streamline release cycles.</li>
+                    <li>Digitised and modernised existing business processes, replacing manual workflows in construction estimation, time tracking, payroll, project planning, and reporting with integrated software solutions.</li>
+                    <li>Developed financial analysis tools and automated payroll systems for 200+ employees, significantly improving efficiency, data accuracy, and compliance.</li>
+                    <li>Created and deployed facial recognition systems, expanding the technology portfolio and enhancing the accuracy and efficiency of timekeeping for payroll.</li>
+                    <li>Oversaw technology patents, guiding the company’s intellectual property strategy and supporting innovation-driven growth.</li>
+                    <li>Engaged with builder unions and key stakeholders, effectively communicating the value of modernization and driving the adoption of cutting-edge technologies across the industry.</li>
+                </ul>
+            </div>
 
-            <div class="position-title">Founder, Pixelflair Interactive</div>
-            <div class="org-info">Jan 2013–Aug 2014 | Gold Coast, QLD</div>
-            <ul>
-                <li>Led a small independent team, using game industry skills to create enterprise productivity tools.</li>
-                <li>Created and released independent mobile games and lifestyle apps.</li>
-            </ul>
-
-            <div class="position-title">Tutor, Object Oriented Programming, QUT</div>
-            <div class="org-info">Jan 2013–Aug 2014 | Brisbane, QLD</div>
-            <ul>
-                <li>Guided students through core OOP principles—encapsulation, inheritance, polymorphism, abstraction, and best practices in software design.</li>
-                <li>Taught foundational and advanced design patterns, data structures, and clean coding techniques to future developers.</li>
-                <li>Mentored diverse student cohorts, improving their problem-solving skills, debugging techniques, and understanding of event-driven architectures.</li>
-                <li>Fostered a collaborative learning environment, encouraging peer review, iterative improvement, and the adoption of industry-standard tools and methodologies.</li>
-            </ul>            
-
-            <div class="position-title">Programmer, The Binary Mill <a href="https://www.thebinarymill.com/" target="_blank"><img src="icon-popout.svg"></a></div>
-            <div class="org-info">Jan 2012–Aug 2014 | Gold Coast, QLD</div>
-            <ul>
-                <li>Contributed to award-winning titles, focusing on multiplayer networking, accounts and social play, and building stable, maintainable codebases.</li>
-                <li>Honed communication skills by working closely with designers, producers, and executives, ensuring engineering efforts met creative and strategic objectives.</li>
-            </ul>
-
-            <div class="position-title">Public Speaking & Thought Leadership</div>
-            <ul>
-                <li>Keynote Speaker, 2024 Games Conference at Griffith University, discussing future trends in cross-platform game development and UX design.</li>
-                <li>Regular guest lecturer at QUT, sharing insights on OOP principles, design patterns, and modern gaming technologies.</li>
-                <li>Creator & Maintainer of multiple open-source projects, including Unity Test Pilot and Flume, fostering knowledge exchange and industry best practices.</li>
-                <li>Manager of the Brisbane Unity Developers Meetup Group.</li>
-            </ul>
-
+            <div class="position">
+                <div class="position-title">Founder, Pixelflair Interactive</div>
+                <div class="org-info">Jan 2013–Aug 2014 | Gold Coast, QLD</div>
+                <ul>
+                    <li>Led a small independent team, using game industry skills to create enterprise productivity tools.</li>
+                    <li>Created and released independent mobile games and lifestyle apps.</li>
+                </ul>    
+            </div>
+        
+            <div class="position">
+                <div class="position-title">Tutor, Object Oriented Programming, QUT</div>
+                <div class="org-info">Jan 2013–Aug 2014 | Brisbane, QLD</div>
+                <ul>
+                    <li>Guided students through core OOP principles—encapsulation, inheritance, polymorphism, abstraction, and best practices in software design.</li>
+                    <li>Taught foundational and advanced design patterns, data structures, and clean coding techniques to future developers.</li>
+                    <li>Mentored diverse student cohorts, improving their problem-solving skills, debugging techniques, and understanding of event-driven architectures.</li>
+                    <li>Fostered a collaborative learning environment, encouraging peer review, iterative improvement, and the adoption of industry-standard tools and methodologies.</li>
+                </ul>            
+            </div>
+            
+            <div class="position">
+                <div class="position-title">Programmer, The Binary Mill <a href="https://www.thebinarymill.com/" target="_blank"><img src="icon-popout.svg"></a></div>
+                <div class="org-info">Jan 2012–Aug 2014 | Gold Coast, QLD</div>
+                <ul>
+                    <li>Contributed to award-winning titles, focusing on multiplayer networking, accounts and social play, and building stable, maintainable codebases.</li>
+                    <li>Honed communication skills by working closely with designers, producers, and executives, ensuring engineering efforts met creative and strategic objectives.</li>
+                </ul>    
+            </div>
+            
+            <div class="position">
+                <div class="position-title">Public Speaking & Thought Leadership</div>
+                <ul>
+                    <li>Keynote Speaker, 2024 Games Conference at Griffith University, discussing future trends in cross-platform game development and UX design.</li>
+                    <li>Regular guest lecturer at QUT, sharing insights on OOP principles, design patterns, and modern gaming technologies.</li>
+                    <li>Creator & Maintainer of multiple open-source projects, including Unity Test Pilot and Flume, fostering knowledge exchange and industry best practices.</li>
+                    <li>Manager of the Brisbane Unity Developers Meetup Group.</li>
+                </ul>    
+            </div>
+            
         </div>
 
         <div class="references">
